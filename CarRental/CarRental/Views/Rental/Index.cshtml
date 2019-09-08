@@ -1,0 +1,67 @@
+﻿@model CarRental.Models.ViewModels.CarViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+
+</script>
+
+<h2>Rentals</h2>
+
+@{
+    int index = 0;
+
+    for (int i = 0; i < Model.Cars.Count / 2; i++)
+    {
+        if (index > Model.Cars.Count)
+        {
+            break;
+        }
+        <div class="row">
+            @if (index < Model.Cars.Count)
+            {
+                <div class="col-md-4 custom">
+                    <div class="customCards">
+                        <h2>@Model.Cars[index].Year @Model.Cars[index].Make @Model.Cars[index].Model</h2>
+                        <p>
+                            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites
+                        </p>
+                        <a href="https://go.microsoft.com/fwlink/?LinkId=301865"><img src="~/Content/Images/carStock.PNG" alt="car-stock-photo" width="240" /></a>
+                        <p><a class="btn btn-danger" style="margin-top: 10px;" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                    </div>
+                </div>
+            }
+            @if (index + 1 < Model.Cars.Count)
+            {
+                <div class="col-md-4 custom">
+                    <div class="customCards">
+                        <h2>@Model.Cars[index + 1].Year @Model.Cars[index + 1].Make @Model.Cars[index + 1].Model</h2>
+                        <p>
+                            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites
+                        </p>
+                        <a href="https://go.microsoft.com/fwlink/?LinkId=301865"><img src="~/Content/Images/carStock.PNG" alt="car-stock-photo" width="240" /></a>
+                        <p><a class="btn btn-danger" style="margin-top: 10px;" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                    </div>
+                </div>
+            }
+            @if (index + 2 < Model.Cars.Count)
+            {
+                <div class="col-md-4 custom">
+                    <div class="customCards">
+                        <h2>@Model.Cars[index + 2].Year @Model.Cars[index + 2].Make @Model.Cars[index + 2].Model</h2>
+                        <p>
+                            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites
+                        </p>
+                        <div>
+                            <a href="https://go.microsoft.com/fwlink/?LinkId=301865"><img src="~/Content/Images/carStock.PNG" alt="car-stock-photo" width="240" /></a>
+                            <p><a class="btn btn-danger" style="margin-top: 10px;" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        index = index + 3;
+    }
+}

@@ -1,0 +1,62 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #393f4d; 
+    color: #d4d4dc;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.scrollable-table {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.form-control.custom {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.fa.fa-close.custom {
+    cursor: pointer;
+    text-decoration: none;
+    color: lightgray;
+}
+
+.fa.fa-close.custom:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: orangered;
+}
+
+.customCards {
+    margin: 15px 0px 15px 0px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid lightgray;
+    background-color: #1d1e22;
+    border-radius: 6px 6px;
+    height: 390px;
+}
+
+img {
+    border: 2px solid gray;
+    border-radius: 5px 5px;
+}
