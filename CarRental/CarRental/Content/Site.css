@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #393f4d; 
+    background-color: #1b1b1b;
     color: #d4d4dc;
 }
 
@@ -48,7 +48,7 @@ textarea {
 }
 
 .customCards {
-    margin: 15px 0px 15px 0px;
+    margin: 15px 0 15px 0;
     padding: 10px 10px 10px 10px;
     border: 1px solid lightgray;
     background-color: #1d1e22;
@@ -60,3 +60,58 @@ img {
     border: 2px solid gray;
     border-radius: 5px 5px;
 }
+
+.navbar.navbar-inverse.navbar-fixed-top{
+    background-color: red;
+}
+
+ul.nav.navbar-nav > li > a {
+    color: black;
+}
+
+ul.nav.navbar-nav > li > a:hover {
+    color: red;
+}
+
+div.navbar-header > a.navbar-brand {
+    color: red;
+}
+
+div.navbar-header > a.navbar-brand:hover {
+    color: red;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle:focus {
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle {
+    background-color: transparent;
+}
+
+.fa.fa-search.magnifyingGlass {
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    padding: 5px 6px 5px 6px;
+    color: darkgray;
+    background-color: white;
+}
+
+.form-control.customInput {
+    text-indent: 15px;
+    margin-bottom: 15px;
+}
+
+.btn.btn-primary.customLink {
+    color: white;
+}
+

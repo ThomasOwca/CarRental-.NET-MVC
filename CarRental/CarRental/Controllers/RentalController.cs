@@ -16,7 +16,6 @@ namespace CarRental.Controllers
             _context = ApplicationDbContext.Create();
         }
 
-        // GET: Rental
         public ActionResult Index()
         {
             var cars = _context.Cars
@@ -27,6 +26,28 @@ namespace CarRental.Controllers
             var model = new CarViewModel { Cars = cars };
 
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Search(string searchValue)
+        {
+            var cars = _context.Cars
+                .Where(car => !car.IsRemoved)
+                .Where(car => car.Model.ToLower().Contains(searchValue.ToLower()) || car.Make.ToLower().Contains(searchValue.ToLower())
+                || car.Year.ToString().Contains(searchValue))
+                .OrderByDescending(car => car.Id)
+                .ToList();
+
+            var model = new CarViewModel { Cars = cars, SearchValue = searchValue };
+
+            if (searchValue.Trim() == "")
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(model);
+            }
         }
     }
 }

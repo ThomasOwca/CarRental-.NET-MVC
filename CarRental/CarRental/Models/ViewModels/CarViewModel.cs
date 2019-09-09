@@ -10,5 +10,6 @@ namespace CarRental.Models.ViewModels
     {
         public List<Car> Cars { get; set; }
         public List<bool> CheckedBoxes { get; set; }
+        public string SearchValue { get; set; }
     }
 }

@@ -1,22 +1,5 @@
 ﻿@model CarRental.Models.ViewModels.CarViewModel
 
-@{
-    int[] boxes = new int[Model.Cars.Count];
-    List<int> checkedBoxes = boxes.ToList();
-
-    object Add(int value)
-    {
-        int? foundValue = checkedBoxes.FirstOrDefault(val => val == value);
-
-        if (foundValue != null)
-        {
-            checkedBoxes.Add(value);
-        }
-
-        return new object();
-    }
-}
-
 <br />
 <div class="row">
     <div class="col-lg-4">
@@ -33,7 +16,6 @@
             </div>
             <div class="form-group">
                 <label>Year</label>
-                @*<input type="number" class="form-control" placeholder="Year" name="carYear" />*@
                 <select name="carYear" class="form-control" title="Year">
                     <option disabled selected>Year</option>
                     @for (int year = DateTime.Now.Year + 1; year >= DateTime.Now.Year - 10; year--)

@@ -15,9 +15,15 @@ namespace CarRental
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{id}/{searchValue}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional, searchValue = "" }
             );
+
+            //routes.MapRoute(
+            //    name: "Search",
+            //    url: "{controller}/{action}/{search}",
+            //    defaults: new { controller = "CarRental", action = "Index", search = UrlParameter.Optional }
+            //);
         }
     }
 }
