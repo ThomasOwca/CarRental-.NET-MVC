@@ -49,5 +49,26 @@ namespace CarRental.Controllers
                 return View(model);
             }
         }
+
+        [HttpGet]
+        public ActionResult Experiment()
+        {
+            return View(new FieldSetViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult Experiment(FieldSetViewModel model, string acceptConditions)
+        { 
+            if (acceptConditions == "yes")
+            {
+                model.IsChecked = true;
+            }
+            else if (acceptConditions == "no")
+            {
+                model.IsChecked = false;
+            }
+
+            return View(model);
+        }
     }
 }

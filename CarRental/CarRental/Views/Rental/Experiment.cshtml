@@ -1,0 +1,50 @@
+﻿@model CarRental.Models.ViewModels.FieldSetViewModel
+@{
+    ViewBag.Title = "Experiment";
+}
+
+<h2>Experiment</h2>
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <fieldset>
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                @if (Model.IsChecked)
+                {
+                    <input type="radio" value="yes" name="acceptConditions" checked="checked" />
+                }
+                else
+                {
+                    <input type="radio" value="yes" name="acceptConditions" />
+                }
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                You accept the conditions.
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                @if (Model.IsChecked)
+                {
+                    <input type="radio" value="no" name="acceptConditions" />
+                }
+                else
+                {
+                    <input type="radio" value="no" name="acceptConditions" checked="checked"/>
+                }
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                You do not accept the conditions.
+            </div>
+        </div>
+    </fieldset>
+    <br />
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <input type="submit" title="Hello" value="Submit Experiment" class="btn btn-danger" />
+        </div>
+    </div>
+}
+
+
